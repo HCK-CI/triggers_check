@@ -1,0 +1,42 @@
+# Example file for repository virtio-win/kvm-guest-drivers-windows
+# https://github.com/virtio-win/kvm-guest-drivers-windows
+#
+# The test object is VirtIO driver
+# The include/exclude sections contain paths to source dir
+#
+# <driver>:
+#   include:
+#     - <path_to_file>
+#     - <path_to_dir>/
+#   exclude:
+#     - <path_to_file>
+#     - <path_to_dir>/
+#
+# Notes:
+#   Directory should have / at the end
+
+Balloon:
+  include:
+    - Balloon/
+  exclude:
+    - Balloon/app/
+    - Balloon/LICENSE
+NetKVM:
+  include:
+    - NetKVM/
+  exclude:
+    - NetKVM/DebugTools/
+    - NetKVM/Documentation/
+    - NetKVM/LICENSE
+"*":
+  include:
+    - /
+    - Tools/
+    - VirtIO/
+  exclude:
+    - Documentation/
+    - .gitignore
+    - LICENSE
+    - README.md
+    - contributing.md
+    - status.txt
